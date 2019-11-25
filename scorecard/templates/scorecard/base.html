@@ -1,0 +1,130 @@
+{% load static %}
+<html>
+    <head>
+        <title>Golf Scorecard</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/scorecard.css' %}">
+    </head>
+    <body>
+      <nav class="navbar navbar-default navbar-fixed-top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand">Golf Scorecard</a>
+    </div>
+    <nav class="collapse navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a class="p-2 text-dark" href="#sec">New</a>
+        </li>
+        <li>
+          <a href="#sec">Edit</a>
+        </li>
+        <li>
+          <a href="#sec">Visualize</a>
+        </li>
+        <li>
+          <a href="#sec">Prototype</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</nav>
+      <!--
+        <div id="page-header">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                {% if user.is_authenticated %}
+                <!<a href="{% url 'new_card' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a> >
+                {% endif %}
+                  <h1><a href="/">Golf Scorecard</a></h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      -->
+      <div id="page-header">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <h1>Golf Scorecard</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content container">
+          <div class="row">
+              <div class="col-sm-8">
+              {% block content %}
+              {% endblock %}
+              </div>
+          </div>
+      </div>
+      <!--main-->
+      <div class="container-full">
+        <div class="row justify-content-center">
+          <div id="sec1">
+            <div class="row">
+              <div class="col-sm-3" id="Leftcol">
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Hello.</h3></div>
+                  <div class="panel-body"><p id="icon"><i class="fa fa-camera fa-3x"></i> </p><br>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate.
+                    Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis
+                    dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan.
+                    Aliquam in felis sit amet augue. </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3" id="Midcol">
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Hello.</h3></div>
+                  <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate.
+                    Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis
+                    dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan.
+                    Aliquam in felis sit amet augue.
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3" id="Rightcol">
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h3>Hello.</h3></div>
+                  <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate.
+                    Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis
+                    dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan.
+                    Aliquam in felis sit amet augue.
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+        <div id="sec2">
+          <div class="row">
+            <div class="col-sm-6" style="background:red" id="Leftcol2">
+              <img src="//placehold.it/300x300" class="img-fluid" alt="Responsive image">
+            </div>
+            <div class="col-sm-6" id="Rightcol2">
+              <div class="panel panel-default">
+                <div class="panel-heading"><h3>Hello.</h3></div>
+                <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate.
+                  Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis
+                  dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan.
+                  Aliquam in felis sit amet augue.
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      </div>
+    </body>
+</html>
