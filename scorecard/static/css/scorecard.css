@@ -38,8 +38,19 @@ h1 a, h2 a {
     margin-top: 40px;
 }
 
+#Leftcol2 {
+  background-color: #12634C;
+}
+
 .content {
     margin-left: 40px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
 h1, h2, h3, h4 {
